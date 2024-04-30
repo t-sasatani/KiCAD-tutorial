@@ -6,7 +6,7 @@
 - [KiCAD](https://www.kicad.org/): I'm using version 7.0, but 8.0 should be fine too.
 
 ### Tutorial video
-- TBD
+[![](https://img.youtube.com/vi/3FGNw28xBr0/0.jpg)](https://www.youtube.com/watch?v=3FGNw28xBr0)
 
 ## Hands on
 
