@@ -3,17 +3,20 @@
 ## Before beginning
 
 ### Download
-- [KiCAD](https://www.kicad.org/): I'm using version 7.0, but 8.0 should be fine as well.
+- [KiCAD](https://www.kicad.org/): I'm using version 7.0, but 8.0 should be fine too.
 
 ### Tutorial video
 - TBD
 
-## Hands on tutorial
+## Hands on
 
 ### What you will learn
 - The minimum workflow for using KiCad
 - How to place orders to PCB manufactures
 - Some elementary tips for prototyping circuits
+- Files
+    - [schematic](/KiCad/export/sch.pdf)
+    - [board](/KiCad/export/brd.pdf)
 
 ### What you won't learn
 - Circuit design (parts selection, patterning, etc.)
