@@ -1,16 +1,6 @@
 # KiCad tutorial
 
-## Before beginning
-
-### Download
-- [KiCAD](https://www.kicad.org/): I'm using version 7.0, but 8.0 should be fine too.
-
-### Tutorial video
-[![](https://img.youtube.com/vi/3FGNw28xBr0/0.jpg)](https://www.youtube.com/watch?v=3FGNw28xBr0)
-
-## Hands on
-
-### What you will learn
+## What you will learn
 - The minimum workflow for using KiCad
 - How to place orders to PCB manufactures
 - Some elementary tips for prototyping circuits
@@ -18,10 +8,20 @@
     - [schematic](/KiCad/export/sch.pdf)
     - [board](/KiCad/export/brd.pdf)
 
-### What you won't learn
+## What you won't learn
 - Circuit design (parts selection, patterning, etc.)
 
-## 0. General workflow
+# To do before workshop
+
+## Download KiCad
+- [KiCAD](https://www.kicad.org/): I'm using version 7.0, but 8.0 should be fine too.
+
+## Watch short tutorial video (optional)
+[![](https://img.youtube.com/vi/3FGNw28xBr0/0.jpg)](https://www.youtube.com/watch?v=3FGNw28xBr0)
+
+# Hands-on workshop
+
+## General workflow
 ```mermaid
 flowchart TD
     A[Sketch circuit] --> B[Import/create parts]
@@ -34,19 +34,19 @@ flowchart TD
     E --> |OK| F[Send to fab]
 ```
 
-### 1. Sketch circuit
+## Sketch circuit
 - Roughly determine the core components you will use
     - Be careful of the availability of parts, etc
 - For my case, I hand write a sketch
 - We'll skip this in this tutorial
 
-### 2. Import/create parts
+## Import/create parts
 - We will use components pre-loaded in KiCad, so we'll skip this part
 - If you want to make parts, watch the following video.
     - TBD
 
-### 3. Make schematic
-#### Place the components
+## Make schematic
+### Place the components
 ![](./img/schematic_done.png)
 - **LDO: Voltage regulator (U1)**
     - Symbol: NCP1117-ADJ_SOT223
@@ -99,13 +99,11 @@ flowchart TD
     - Symbol: MountingHole
     - MountingHole:MountingHole_3.2mm_M3
 
-### Connect the components ("net" command)
-
+### Tips
 - Name the wires
-- "name" command
-- This makes complex designs easier, so lets make it your habit.
+    - This makes complex designs easier, so lets make it your habit.
 
-## 4. Pattern board
+## Pattern board
 
 ### Constraints
 ![](./img/board_setup.png)
@@ -120,7 +118,7 @@ flowchart TD
 - Look for mechanical intersections, etc.
 ![](./img/3d_view.png)
 
-## 5. Send to fab
+## Send to fab
 - [PCBWay](https://www.pcbway.com/) and [Login information](https://sites.google.com/a/akg.t.u-tokyo.ac.jp/wiki) of lab account
 - Use [PCBWay plug-in for KiCad](https://github.com/pcbway/PCBWay-Plug-in-for-Kicad)
 - Try out gerber viewer (beta)
