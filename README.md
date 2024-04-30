@@ -22,25 +22,30 @@
 - Circuit design (parts selection, patterning, etc.)
 
 ## 0. General workflow
-1. (Make a rough blueprint)
-2. Import (or create) parts
-3. Make the schematic
-4. Pattern the board
-5. Do 1-3 back and forth
-6. Place order to PCB manufacture
+```mermaid
+flowchart TD
+    A[Sketch circuit] --> B[Import/create parts]
+    B --> C[Make schematic]
+    C --> G[Define rules]
+    G --> D[Pattern board]
+    D --> C
+    D --> E{DRC}
+    E --> |NG| D
+    E --> |OK| F[Send to fab]
+```
 
-### 1. (Make a rough blueprint)
+### 1. Sketch circuit
 - Roughly determine the core components you will use
     - Be careful of the availability of parts, etc
 - For my case, I hand write a sketch
 - We'll skip this in this tutorial
 
-### 2. Import (or create) parts
+### 2. Import/create parts
 - We will use components pre-loaded in KiCad, so we'll skip this part
 - If you want to make parts, watch the following video.
     - TBD
 
-### 3. Make the schematic
+### 3. Make schematic
 #### Place the components
 ![](./img/schematic_done.png)
 - **LDO: Voltage regulator (U1)**
@@ -76,11 +81,6 @@
     - Footprint: Connector_Coaxial:SMA_Amphenol_901-143_Horizontal
     - [Digikey](https://www.digikey.jp/products/ja?keywords=60311002114501)
 
-- **Load: LED10MM (LOAD)**
-    - Symbol: LED
-    - Footprint: LED_THT:LED_D10.0mm
-    - Adjust here to be 9 V.
-
 - **Ceramic capacitors: C_CHIP-0603(1608-METRIC) (C) (Version 4) (C3, C4, C5, C6)**
     - Symbol: C
     - Footprint: Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder
@@ -93,6 +93,7 @@
 - **Jumper pin: PINHD-1X1 (JP1-JP8)**
     - Symbol: TestPoint
     - Footprint: TestPoint:TestPoint_Keystone_5000-5004_Miniature
+    - Vout is also this pin.
 
 - **Mounting hole (H1-H4)**
     - Symbol: MountingHole
@@ -104,7 +105,7 @@
 - "name" command
 - This makes complex designs easier, so lets make it your habit.
 
-## 4. Pattern the board
+## 4. Pattern board
 
 ### Constraints
 ![](./img/board_setup.png)
@@ -119,7 +120,7 @@
 - Look for mechanical intersections, etc.
 ![](./img/3d_view.png)
 
-## 6. Place order to PCB manifacture
+## 5. Send to fab
 - [PCBWay](https://www.pcbway.com/) and [Login information](https://sites.google.com/a/akg.t.u-tokyo.ac.jp/wiki) of lab account
 - Use [PCBWay plug-in for KiCad](https://github.com/pcbway/PCBWay-Plug-in-for-Kicad)
 - Try out gerber viewer (beta)
