@@ -4,9 +4,7 @@
 - The minimum workflow for using KiCad
 - How to place orders to PCB manufactures
 - Some elementary tips for prototyping circuits
-- Final design files
-    - [schematic](/KiCad/export/sch.pdf)
-    - [board](/KiCad/export/brd.pdf)
+- Final design files ([schematic](/KiCad/export/sch.pdf), [board](/KiCad/export/brd.pdf))
 
 ## What you won't learn
 - Circuit design (parts selection, patterning, etc.)
@@ -22,17 +20,20 @@ About 13 min
 
 # Hands-on workshop
 
-## General workflow
+## Typical workflow
+DRC: Design rule check
 ```mermaid
 flowchart TD
-    A[Sketch circuit] --> B[Import/create parts]
-    B --> C[Make schematic]
-    C --> G[Define rules]
+    B[Import/create parts] --> C[Make schematic]
+    C --> B
+    C --> G[Define DRC]
     G --> D[Pattern board]
     D --> C
     D --> E{DRC}
     E --> |NG| D
-    E --> |OK| F[Send to fab]
+    E --> |OK| F{Fab review}
+    F --> |NG| D
+    F --> |OK| H[Order]
 ```
 
 ## Sketch circuit
@@ -108,6 +109,9 @@ flowchart TD
 ## Pattern board
 
 ### Constraints
+Below are just examples. You'll need to check factory design rules (for PCBWay, you can check the [PCB Instant Quote](https://www.pcbway.com/orderonline.aspx) page).
+- PCBWay: https://www.pcbway.com/capabilities.html
+
 ![](./img/board_setup.png)
 ![](./img/constraints.png)
 
