@@ -1,5 +1,9 @@
 # KiCad tutorial
 
+## Content (what we will make)
+- Make a simple wireless power receiver circuit that lights up an LED light bulb.
+- (I might add some other circuit examples by the workshop.)
+
 ## What you will learn
 - The minimum workflow for using KiCad
 - How to place orders to PCB manufactures
