@@ -4,7 +4,7 @@
 - The minimum workflow for using KiCad
 - How to place orders to PCB manufactures
 - Some elementary tips for prototyping circuits
-- Final files
+- Final design files
     - [schematic](/KiCad/export/sch.pdf)
     - [board](/KiCad/export/brd.pdf)
 
@@ -17,6 +17,7 @@
 - [KiCAD](https://www.kicad.org/): I'm using version 8.0.2.
 
 ## Watch short tutorial video (optional)
+About 13 min
 [![](https://img.youtube.com/vi/3FGNw28xBr0/0.jpg)](https://www.youtube.com/watch?v=3FGNw28xBr0)
 
 # Hands-on workshop
@@ -47,7 +48,7 @@ flowchart TD
 
 ## Make schematic
 ### Place the components
-[schematic](/KiCad/export/sch.pdf)
+[Schematic PDF](/KiCad/export/sch.pdf)
 ![](./img/schematic_done.png)
 - **LDO: Voltage regulator (U1)**
     - Symbol: NCP1117-ADJ_SOT223
@@ -111,6 +112,7 @@ flowchart TD
 ![](./img/constraints.png)
 
 ### Board layout
+[Board layout PDF](/KiCad/export/brd.pdf)
 ![](./img/board_before_layout.png)
 ![](./img/parts_place.png)
 ![](./img/board_layout.png)
