@@ -97,7 +97,7 @@ flowchart TD
         - C5 = DNP
         - C6 = 0.1 uF
 
-- **Jumper pin: (JP1-JP8)**
+- **Test point: (TP1-TP8)**
     - Symbol: TestPoint
     - Footprint: TestPoint:TestPoint_Keystone_5000-5004_Miniature
     - Vout is also this pin.
