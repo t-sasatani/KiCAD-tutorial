@@ -88,7 +88,7 @@ flowchart TD
     - Footprint: Connector_Coaxial:SMA_Amphenol_901-143_Horizontal
     - [Digikey](https://www.digikey.jp/products/ja?keywords=60311002114501)
 
-- **Ceramic capacitors: C_CHIP-0603(1608-METRIC) (C) (Version 4) (C3, C4, C5, C6)**
+- **Ceramic capacitors: (C3, C4, C5, C6)**
     - Symbol: C
     - Footprint: Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder
     - Values
@@ -97,7 +97,7 @@ flowchart TD
         - C5 = DNP
         - C6 = 0.1 uF
 
-- **Jumper pin: PINHD-1X1 (JP1-JP8)**
+- **Jumper pin: (JP1-JP8)**
     - Symbol: TestPoint
     - Footprint: TestPoint:TestPoint_Keystone_5000-5004_Miniature
     - Vout is also this pin.
